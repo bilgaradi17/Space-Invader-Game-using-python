@@ -1,17 +1,17 @@
 # Space-Invader-Game-using-python
 
 ## How to Play
-Move Left: Press the left arrow key.
-Move Right: Press the right arrow key.
-Shoot: Press the spacebar.
+* Move Left: Press the left arrow key.
+* Move Right: Press the right arrow key.
+* Shoot: Press the spacebar.
 
 
 ## Game Elements
-Player: The spaceship controlled by the player.
-Enemies: Multiple enemies that move horizontally and descend towards the player.
-Bullet: The projectile fired by the player to hit the enemies.
-Score: The player's score, which increases when an enemy is hit.
-Game Over: The state when an enemy reaches the bottom of the screen.
+* Player: The spaceship controlled by the player.
+* Enemies: Multiple enemies that move horizontally and descend towards the player.
+* Bullet: The projectile fired by the player to hit the enemies.
+* Score: The player's score, which increases when an enemy is hit.
+* Game Over: The state when an enemy reaches the bottom of the screen.
 
 
 ## Detailed Explanation of the Code
@@ -29,8 +29,8 @@ pygame.init()
 # Create the screen (800x600)
 screen = pygame.display.set_mode((800, 600))
 ```
-pygame.init(): Initializes all the Pygame modules.
-pygame.display.set_mode(): Creates a window of size 800x600 pixels.
+* pygame.init(): Initializes all the Pygame modules.
+* pygame.display.set_mode(): Creates a window of size 800x600 pixels.
 
 
 ### Background and Sound
@@ -43,10 +43,10 @@ background = pygame.transform.scale(background, (800, 600))
 mixer.music.load('path/to/background.mp3')
 mixer.music.play(-1)
 ```
-pygame.image.load(): Loads an image file.
-pygame.transform.scale(): Resizes the image to fit the screen.
-mixer.music.load(): Loads the background music file.
-mixer.music.play(-1): Plays the background music in a loop.
+* pygame.image.load(): Loads an image file.
+* pygame.transform.scale(): Resizes the image to fit the screen.
+* mixer.music.load(): Loads the background music file.
+* mixer.music.play(-1): Plays the background music in a loop.
 
 
 ### Caption and Icon
@@ -56,8 +56,8 @@ pygame.display.set_caption("Space Invader")
 icon = pygame.image.load('path/to/ufo.png')
 pygame.display.set_icon(icon)
 ```
-pygame.display.set_caption(): Sets the window title.
-pygame.display.set_icon(): Sets the window icon.
+* pygame.display.set_caption(): Sets the window title.
+* pygame.display.set_icon(): Sets the window icon.
 
 
 ### Player Setup
@@ -69,8 +69,8 @@ playerX = 370
 playerY = 530
 playerX_change = 0
 ```
-playerImg: The player’s spaceship image, resized to 50x50 pixels.
-playerX, playerY: Initial position of the player.
+* playerImg: The player’s spaceship image, resized to 50x50 pixels.
+* playerX, playerY: Initial position of the player.
 
 
 ### Enemy Setup
@@ -92,9 +92,9 @@ for i in range(num_of_enemies):
     enemyX_change.append(4)
     enemyY_change.append(40)
 ```
-enemyImg: List to store enemy images.
-enemyX, enemyY: Lists to store the positions of enemies.
-random.randint(): Generates random positions for enemies.
+* enemyImg: List to store enemy images.
+* enemyX, enemyY: Lists to store the positions of enemies.
+* random.randint(): Generates random positions for enemies.
 
 
 ### Bullet Setup
@@ -118,8 +118,8 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 textX = 10
 textY = 10
 ```
-score_value: Stores the player’s score.
-pygame.font.Font(): Loads the font for displaying the score.
+* score_value: Stores the player’s score.
+* pygame.font.Font(): Loads the font for displaying the score.
 
 
 ### Game Over Display
@@ -127,7 +127,7 @@ pygame.font.Font(): Loads the font for displaying the score.
 # Game Over display
 over_font = pygame.font.Font('freesansbold.ttf', 64)
 ```
-over_font: Loads a larger font for the game over text.
+* over_font: Loads a larger font for the game over text.
 
 
 ###Utility Functions
@@ -169,13 +169,13 @@ def reset_game():
         enemyX[i] = random.randint(0, 750)
         enemyY[i] = random.randint(50, 150)
 ```
-show_score(): Displays the score on the screen.
-game_over_text(): Displays the game over message.
-player(): Draws the player image.
-enemy(): Draws an enemy image.
-fire_bullet(): Fires a bullet from the player’s position.
-isCollision(): Checks if a bullet has collided with an enemy.
-reset_game(): Resets the game state to initial values.
+* show_score(): Displays the score on the screen.
+* game_over_text(): Displays the game over message.
+* player(): Draws the player image.
+* enemy(): Draws an enemy image.
+* fire_bullet(): Fires a bullet from the player’s position.
+* isCollision(): Checks if a bullet has collided with an enemy.
+* reset_game(): Resets the game state to initial values.
 
 
 Game Loop
@@ -265,14 +265,14 @@ while running:
 pygame.quit()
 sys.exit()
 ```
-while running: Main game loop that runs until the game window is closed.
-pygame.event.get(): Handles user input and game events.
-player movement and boundary checks: Ensures the player stays within screen boundaries.
-enemy movement and collision detection: Handles enemy behavior and checks for collisions with bullets.
-game over conditions: Ends the game if enemies reach the bottom of the screen.
-pygame.display.update(): Updates the screen with the latest game state.
-clock.tick(60): Limits the game to 60 frames per second.
-pygame.quit() and sys.exit(): Cleanly exits the game.
+* while running: Main game loop that runs until the game window is closed.
+* pygame.event.get(): Handles user input and game events.
+* player movement and boundary checks: Ensures the player stays within screen boundaries.
+* enemy movement and collision detection: Handles enemy behavior and checks for collisions with bullets.
+* game over conditions: Ends the game if enemies reach the bottom of the screen.
+* pygame.display.update(): Updates the screen with the latest game state.
+* clock.tick(60): Limits the game to 60 frames per second.
+* pygame.quit() and sys.exit(): Cleanly exits the game.
 
 
 ## Conclusion
