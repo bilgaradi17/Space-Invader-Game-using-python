@@ -1,4 +1,4 @@
-# Space-Invader-Game-using-python
+# Space-Invader-Game-using-pygame
 
 ## How to Play
 * Move Left: Press the left arrow key.
