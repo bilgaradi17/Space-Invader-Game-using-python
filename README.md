@@ -130,7 +130,7 @@ over_font = pygame.font.Font('freesansbold.ttf', 64)
 * over_font: Loads a larger font for the game over text.
 
 
-###Utility Functions
+### Utility Functions
 ```
 def show_score(x, y):
     score = font.render("Score : " + str(score_value), True, (255, 255, 255))
